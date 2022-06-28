@@ -14,12 +14,11 @@ public:
                 if(check.find(freq[i]) == check.end()){
                     check.insert(freq[i]);
                 }else{
-                    int curr = freq[i];
-                    while(check.find(curr) != check.end()){
+                    while(check.find(freq[i]) != check.end()){
                         count++;
-                        curr--;
+                        freq[i]--;
                     }
-                    if(curr > 0) check.insert(curr);
+                    if(freq[i] > 0) check.insert(freq[i]);
                 }
             }
         }
