@@ -1,9 +1,7 @@
 class Solution {
 public:
     int scheduleCourse(vector<vector<int>>& courses) {
-        sort(courses.begin(), courses.end(), [](const vector<int>& a, vector<int>& b) {
-            return a[1] < b[1];
-        });
+        sort(courses.begin(), courses.end(), cmp);
         priority_queue<int> q;
         int sum = 0;
         for(auto i : courses) {
@@ -15,5 +13,8 @@ public:
             }
         }
         return q.size();
+    }
+    static bool cmp(vector<int>& p1, vector<int>& p2){
+         return p1[1]<p2[1];
     }
 };
