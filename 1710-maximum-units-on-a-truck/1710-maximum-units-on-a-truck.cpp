@@ -7,7 +7,7 @@ public:
             int x=min(box[0],truckSize);  
             ans+=(x*box[1]);  
             truckSize-=x;
-            if(truckSize <= 0) break;  //capacity full
+            if(truckSize <= 0) break; 
         }
         return ans;
     }
