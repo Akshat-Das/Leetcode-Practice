@@ -9,7 +9,6 @@ public:
             code += morse_code[ch - 'a'];
         transform.insert(code);
     }
-    
     return transform.size();
     }
 };
