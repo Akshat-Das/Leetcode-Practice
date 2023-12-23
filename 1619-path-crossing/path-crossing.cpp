@@ -6,10 +6,10 @@ public:
         visi.push_back({x,y});
         for(auto it:path)
         {
-            if(it=='N')x++;
-            else if(it=='S')x--;
-            else if(it=='E')y++;
-            else if(it=='W')y--;            
+            if(it=='N')y++;
+            else if(it=='S')y--;
+            else if(it=='E')x++;
+            else if(it=='W')x--;            
             visi.push_back({x,y});
         }
         set<pair<int,int>>st(visi.begin(),visi.end());
